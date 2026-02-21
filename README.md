@@ -38,7 +38,7 @@ The goal of this project is to build a production-style pipeline combining:
 ---
 
 ## Status
-🚧 Project in active development
+Project in active development
 
 ---
 
