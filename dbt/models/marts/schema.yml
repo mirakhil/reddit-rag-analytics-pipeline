@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: fct_posts
+    description: "Joined table of Reddit posts and comments. One row per comment, with full post context attached. Used for RAG embeddings and keyword search."
+    columns:
+      - name: post_id
+        description: "Unique Reddit post ID"
+        tests:
+          - not_null
+
+      - name: post_title
+        description: "Title of the Reddit post"
+        tests:
+          - not_null
+
+      - name: post_body
+        description: "Cleaned body text of the post"
+
+      - name: post_author
+        description: "Username of post author"
+
+      - name: post_score
+        description: "Reddit upvote score of the post"
+
+      - name: upvote_ratio
+        description: "Ratio of upvotes to total votes"
+
+      - name: num_comments
+        description: "Total number of comments on the post"
+
+      - name: post_created_at
+        description: "Timestamp when post was created"
+
+      - name: post_url
+        description: "Full URL of the post"
+
+      - name: post_permalink
+        description: "Reddit permalink of the post"
+
+      - name: subreddit
+        description: "Subreddit the post belongs to"
+
+      - name: subreddit_subscribers
+        description: "Number of subscribers in the subreddit"
+
+      - name: over_18
+        description: "Whether the post is marked NSFW"
+
+      - name: link_flair_text
+        description: "Post flair/category tag"
+
+      - name: comment_id
+        description: "Unique Reddit comment ID"
+
+      - name: comment_body
+        description: "Cleaned comment text"
+
+      - name: comment_author
+        description: "Username of comment author"
+
+      - name: comment_score
+        description: "Reddit upvote score of the comment"
+
+      - name: comment_created_at
+        description: "Timestamp when comment was created"
+
+      - name: comment_permalink
+        description: "Reddit permalink of the comment"
+
+      - name: comment_parent_id
+        description: "Parent ID — links comment to post"

@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+*.env.*
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+.hypothesis/
+
+# Project data outputs
+data/raw/
+data/processed/
+data/faiss_index/
+data/tmp/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+

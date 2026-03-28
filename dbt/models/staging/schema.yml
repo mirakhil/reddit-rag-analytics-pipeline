@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: staging
+    database: REDDIT_RAG
+    schema: STAGING
+    tables:
+      - name: STG_POSTS
+        description: "Raw posts loaded from Reddit API via PySpark"
+      - name: STG_COMMENTS
+        description: "Raw comments loaded from Reddit API via PySpark"
+
+models:
+  - name: stg_posts
+    description: "Cleaned and typed posts from STG_POSTS"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_comments
+    description: "Cleaned and typed comments from STG_COMMENTS"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
